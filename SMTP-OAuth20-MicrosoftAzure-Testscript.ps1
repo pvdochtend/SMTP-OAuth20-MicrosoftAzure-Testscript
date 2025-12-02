@@ -103,7 +103,7 @@ try {
         $installModule = Read-Host "  Wil je de module nu installeren? (J/N)"
         if ($installModule -match "^[JjYy]") {
             Write-Host "  Module installeren..." -ForegroundColor Gray
-            Install-Module -Name ExchangeOnlineManagement -Force -Scope CurrentUser
+            Install-Module -Name ExchangeOnlineManagement -AllowClobber -Force -Scope CurrentUser
             Import-Module ExchangeOnlineManagement
         } else {
             Write-Host "  [FOUT] Module is vereist. Script wordt afgebroken." -ForegroundColor Red

@@ -8,12 +8,12 @@ Een interactief PowerShell script om alle vereiste Microsoft 365 / Exchange Onli
 
 ## 🎯 Doel
 
-Dit script controleert en configureert alle benodigde instellingen om e-mail te versturen vanuit OutSystems ODC via Microsoft Exchange Online met OAuth 2.0 authenticatie (Client Credentials Flow). Het vervangt de verouderde Basic Authentication methode met een veilige en compliant setup.
+Dit script verifieert alle benodigde instellingen om e-mail te versturen vanuit OutSystems ODC via Microsoft Exchange Online met OAuth 2.0 authenticatie (Client Credentials Flow). Bij problemen biedt het script de mogelijkheid om deze interactief op te lossen (na gebruikersbevestiging). Het vervangt de verouderde Basic Authentication methode met een veilige en compliant setup.
 
 ## ✅ Wat wordt gecontroleerd?
 
-| Stap | Controle | Automatisch oplossen |
-|------|----------|---------------------|
+| Stap | Controle | Kan oplossen (na bevestiging) |
+|------|----------|-------------------------------|
 | 0 | Verbinding met Exchange Online | - |
 | 1 | Service Principal registratie in Exchange | ✅ |
 | 2 | Mailbox informatie & aliassen | - |
@@ -53,10 +53,10 @@ Zorg dat je de volgende gegevens bij de hand hebt voordat je het script uitvoert
 
 ```powershell
 # Optie A: Clone de repository
-git clone https://github.com/[jouw-username]/OutSystems-ODC-Email-OAuth-Verification.git
+git clone https://github.com/[jouw-username]/SMTP-OAuth20-MicrosoftAzure-Testscript.git
 
 # Optie B: Download alleen het script
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/[jouw-username]/OutSystems-ODC-Email-OAuth-Verification/main/OutSystems-ODC-Email-OAuth-Verification.ps1" -OutFile "OutSystems-ODC-Email-OAuth-Verification.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/[jouw-username]/SMTP-OAuth20-MicrosoftAzure-Testscript/main/SMTP-OAuth20-MicrosoftAzure-Testscript.ps1" -OutFile "SMTP-OAuth20-MicrosoftAzure-Testscript.ps1"
 ```
 
 ### Stap 2: Execution Policy instellen (indien nodig)
@@ -66,16 +66,16 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/[jouw-username]/OutSys
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 # Optie B: Unblock het gedownloade bestand
-Unblock-File -Path ".\OutSystems-ODC-Email-OAuth-Verification.ps1"
+Unblock-File -Path ".\SMTP-OAuth20-MicrosoftAzure-Testscript.ps1"
 ```
 
 ### Stap 3: Script uitvoeren
 
 ```powershell
-.\OutSystems-ODC-Email-OAuth-Verification.ps1
+.\SMTP-OAuth20-MicrosoftAzure-Testscript.ps1
 ```
 
-Het script vraagt interactief om alle benodigde gegevens en geeft bij elke stap de mogelijkheid om problemen direct op te lossen.
+Het script vraagt interactief om alle benodigde gegevens. Bij elke verificatiestap waar een probleem wordt gedetecteerd, krijg je de mogelijkheid om dit direct op te lossen (na bevestiging).
 
 ## 📸 Voorbeelduitvoer
 
