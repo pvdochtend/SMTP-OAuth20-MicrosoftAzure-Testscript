@@ -156,7 +156,7 @@ Set-CASMailbox -Identity "mailbox@contoso.com" -SmtpClientAuthenticationDisabled
 Set-TransportConfig -SmtpClientAuthenticationDisabled $false
 ```
 
-### Versturen vanuit aliassen toestaan
+### Versturen vanuit aliassen toestaan (indien het adres afwijkt van het primaire SMTP adres van de mailbox!)
 ```powershell
 Set-OrganizationConfig -SendFromAliasEnabled $True
 ```
