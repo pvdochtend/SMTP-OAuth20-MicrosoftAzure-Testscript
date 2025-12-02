@@ -94,7 +94,7 @@ Het script vraagt interactief om alle benodigde gegevens. Bij elke verificatiest
 
 [STAP 1] Service Principal in Exchange Online controleren...
   [OK] Service Principal gevonden:
-       DisplayName: ADA ODC Mail Service
+       DisplayName: OutSystems ODC Mail Service
        ObjectId:    84aa014f-3fba-4cda-b80e-2390f6cb3e01
        AppId:       ee610a20-c543-4a05-970e-a5df69cf84f6
 
