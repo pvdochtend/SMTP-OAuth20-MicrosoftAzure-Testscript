@@ -32,7 +32,7 @@ Dit script verifieert alle benodigde instellingen om e-mail te versturen vanuit 
   - `SMTP.SendAsApp` API permission (Office 365 Exchange Online)
   - Admin consent verleend
   - Client Secret aangemaakt
-- Exchange Online mailbox voor verzenden
+- Exchange Online mailbox voor verzenden (**Een normale (regular) mailbox. Geen shared mailbox!! Heeft ook een licentie nodig, anders wordt er geen mailbox aangemaakt in Exchange.**
 - Administrator rechten in Exchange Online
 
 ### Benodigde gegevens
