@@ -231,6 +231,17 @@ try {
     
 } catch {
     Write-Host "  [FOUT] Mailbox niet gevonden: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host ""
+    Write-Host "  Mogelijke oorzaken:" -ForegroundColor Yellow
+    Write-Host "  1. Het email adres is verkeerd gespeld" -ForegroundColor White
+    Write-Host "  2. De gebruiker heeft GEEN Microsoft 365 licentie toegewezen" -ForegroundColor White
+    Write-Host "     (Zonder licentie wordt er geen mailbox aangemaakt in Exchange Online)" -ForegroundColor Gray
+    Write-Host "  3. De mailbox is recent aangemaakt en nog niet gesynchroniseerd" -ForegroundColor White
+    Write-Host ""
+    Write-Host "  Oplossing:" -ForegroundColor Yellow
+    Write-Host "  - Controleer of de gebruiker een licentie heeft in Azure Portal > Users > [Gebruiker] > Licenses" -ForegroundColor Cyan
+    Write-Host "  - Ken een licentie toe met Exchange Online (bijv. Microsoft 365 E3/E5)" -ForegroundColor Cyan
+    Write-Host "  - Wacht 5-10 minuten na licentietoewijzing voordat de mailbox beschikbaar is" -ForegroundColor Cyan
 }
 
 Write-Host ""
